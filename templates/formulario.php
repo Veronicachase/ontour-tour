@@ -108,13 +108,13 @@
             <label>Nombre de la Parada:</label>
             <input type="text" name="nombre_parada[]" >
 
-            <div id="contenedor-imagenes-0">
-    <div class="imagen">
-        <label>Nombre de la Imagen:</label>
-        <input type="text" name="nombre_imagen[0][]" placeholder="Nombre de la imagen">
-        <label>Agregar Imagen:</label>
-        <input type="file" name="archivo_imagen[0][]" accept="image/*">
-    </div>
+    <div id="contenedor-imagenes-0">
+        <div class="imagen">
+            <label>Nombre de la Imagen:</label>
+            <input type="text" name="nombre_imagen[0][]" placeholder="Nombre de la imagen">
+            <label>Agregar Imagen:</label>
+            <input type="file" name="archivo_imagen[0][]" accept="image/*">
+        </div>
     <button type="button" onclick="agregarImagen(0)">Agregar Imagen</button>
 </div>
 
