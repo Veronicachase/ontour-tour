@@ -3,7 +3,7 @@
  * Plugin Name: Agregar Tour
  * Description: Plugin para agregar un tour mediante un formulario de tres pasos.
  * Version: 1.0
- * Author: Tu Nombre
+ * Author: Verónica
  * Text Domain: agregar-tour
  */
 
