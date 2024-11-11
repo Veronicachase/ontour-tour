@@ -1,0 +1,165 @@
+
+.step {
+    margin-bottom: 20px;
+    
+}
+
+.navigation-buttons {
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    margin-right: 10px;
+}
+
+#donde-estoy {
+    margin-bottom: 20px;
+}
+
+.progress-btn {
+    border: none;
+    padding: 10px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+}
+
+.progress-btn.active {
+    background-color: #f87c4b;
+}
+
+.progress-btn:not(.active) {
+   background-color: #ABAEB0;
+}
+
+#paradaForm{
+    box-shadow:1px 2px 3px #cccccc;
+    margin-bottom:2em;
+}
+
+.parada {
+    
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 1em;
+    
+}
+
+#idioma {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.flex-item {
+    margin-top: 2em;
+    color: #f87c4b;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#categoria, #ambiente, #cbcontainer {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#descripcion-container, #cbcontainer {
+    border-radius: 10px;
+}
+
+
+[id^="contenedor-imagenes"]{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top:2em;
+    margin-bottom:2em;
+}
+
+
+.imagen {
+    box-shadow:1px 2px 3px #3e5f6a;
+    border-radius: 10px;
+    padding: 1em;
+    width: 47%; 
+    box-sizing: border-box;
+  
+    gap: 0.5em; 
+   
+}
+
+
+input, select, textarea {
+    border-color: #b3b3b3;
+    background-color: #ffffff; 
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.navigation-buttons{
+    display:flex;
+    justify-content:center;
+}
+
+
+.agregar-imagen-boton, #agregar-parada-boton {
+    margin-bottom:2em;
+    display:flex !important;
+    color:#f87c4b !important;
+    align-self:flex-end !important;
+    border:1px solid #f87c4b !important;
+    
+}
+
+button {
+    border: none; 
+    outline: none; 
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #e05f3d !important; 
+    color-#ffffff;
+}
+
+
+.espacio {
+    margin-top: 1em;
+}
+.seccion-audio{
+    margin-top:1em;
+    border-radius:10px;
+}
+#enviar-datos{
+    display:flex;
+    justify-content:flex-end;
+    background-color:#f87c4b !important;
+    color:#ffffff;
+}
+
+.linea-divisoria{
+    color:#f87c4b ;
+    border:1px solid #f87c4b !important;
+    margin-bottom:1em;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+    .imagen {
+        width: 100%; 
+    }
+}
+

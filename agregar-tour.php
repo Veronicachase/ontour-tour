@@ -44,6 +44,9 @@ function reArrayFiles($file_post, $parada_index) {
 }
 
 // Función para procesar imágenes de una parada
+
+
+// Función para procesar imágenes de una parada
 function procesar_imagenes_parada($parada_id, $parada_index, &$paradas_imagenes_urls) {
     global $wpdb;
 
@@ -53,9 +56,9 @@ function procesar_imagenes_parada($parada_id, $parada_index, &$paradas_imagenes_
     if (isset($_POST['nombre_imagen'][$parada_index]) && !empty($_POST['nombre_imagen'][$parada_index]) && isset($_FILES['archivo_imagen']['name'][$parada_index])) {
         // Asignar variables después de verificar que existen
         $img_nombres = $_POST['nombre_imagen'][$parada_index];
-        $img_files = reArrayFiles($_FILES['archivo_imagen'], $parada_index);
+        $img_files = reArrayFiles($_FILES['archivo_imagen'], $parada_index); // Reorganizar archivos correctamente
 
-        // Recorremos los nombres de las imágenes
+        // Recorremos los nombres de las imágenes y los archivos asociados
         foreach ($img_nombres as $img_index => $img_nombre) {
             $img_nombre = sanitize_text_field($img_nombre);
 
@@ -99,6 +102,7 @@ function procesar_imagenes_parada($parada_id, $parada_index, &$paradas_imagenes_
         error_log('No hay imágenes para la parada ' . $parada_index);
     }
 }
+
 
 // Procesar datos del formulario
 function procesar_tour() {
@@ -242,7 +246,7 @@ function procesar_tour() {
         }
 
         // Agregar las imágenes de la parada
-        if (!empty($paradas_imagenes_urls[$index])) {
+     if (!empty($paradas_imagenes_urls[$index])) {
             $message .= "Imágenes:\n";
             foreach ($paradas_imagenes_urls[$index] as $imagen_url) {
                 $message .= $imagen_url . "\n";

@@ -10,7 +10,7 @@
     <h2>Agregar un Tour</h2> 
 </div>
 
-// comienza el formulario
+
 
 
 <form id="tourForm" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST" enctype="multipart/form-data">
@@ -21,6 +21,7 @@
     <div class="step" id="step-1">
         <h3>Paso 1: Información del Tour</h3>
         <div id="flex-container">
+           <div class="flex">    
             <div class="flex-item">
                 <label for="idioma">Idioma:</label>
 
@@ -42,7 +43,7 @@
                 <input type="text" id="city" name="ciudad" placeholder="ej: Córdoba" >
             </div>
         </div>
-
+    </div> 
         <div class="flex-item">
             <label for="nombre_tour">Nombre del Tour:</label>
             <input type="text" id="nombre_tour" name="nombre_tour" >
@@ -107,30 +108,35 @@
         <div class="parada">
             <label>Nombre de la Parada:</label>
             <input type="text" name="nombre_parada[]" >
+        
+            <!-- Contenedor de Imágenes -->
+            <div id="contenedor-imagenes-0" class="flex">
+                <div class="imagen">
+                    <label>Nombre de la Imagen:</label>
+                    <input type="text" name="nombre_imagen[0][]" placeholder="Nombre de la imagen" class="espacio">
+                    <label>Agregar Imagen:</label>
+                    <input type="file" name="archivo_imagen[0][]" accept="image/*" class="espacio">
+                </div>
+            </div>
 
-    <div id="contenedor-imagenes-0">
-        <div class="imagen">
-            <label>Nombre de la Imagen:</label>
-            <input type="text" name="nombre_imagen[0][]" placeholder="Nombre de la imagen">
-            <label>Agregar Imagen:</label>
-            <input type="file" name="archivo_imagen[0][]" accept="image/*">
-        </div>
-    <button type="button" onclick="agregarImagen(0)">Agregar Imagen</button>
-</div>
-
+            <!-- Botón para agregar una nueva imagen -->
+            <button class="espacio agregar-imagen-boton" type="button" onclick="agregarImagen(0)">Agregar Imagen</button>
+        
+            <!-- Sección de Audio -->
             <fieldset class="seccion-audio">
                 <label>Nombre del Audio:</label>
-                <input type="text" name="audio_nombre[]" >
+                <input type="text" name="audio_nombre[]" class="espacio">
 
                 <label>Agregar Audio:</label>
-                <input type="file" name="audio_archivo[]" accept="audio/*" >
+                <input type="file" name="audio_archivo[]" accept="audio/*" class="espacio">
             </fieldset>
 
             <label>Coordenadas:</label>
-            <input type="text" name="coordenadas[]" >
+            <input type="text" name="coordenadas[]" class="espacio">
         </div>
     </fieldset>
 
+    <!-- Botón para agregar otra parada -->
     <button type="button" id="agregar-parada-boton">Agregar Otra Parada</button>
 
     <div class="navigation-buttons">
@@ -140,10 +146,6 @@
 </div>
 
     
-
-
-
-
 
     <!-- Paso 3: Información Adicional -->
     <div class="step" id="step-3" style="display: none;">

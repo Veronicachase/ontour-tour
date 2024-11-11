@@ -5,9 +5,9 @@ function agregarImagen(paradaIndex) {
     contenedor.insertAdjacentHTML('beforeend', `
         <div class="imagen">
             <label>Nombre de la Imagen:</label>
-            <input type="text" name="nombre_imagen[${paradaIndex}][]" placeholder="Nombre de la imagen">
+            <input type="text" name="nombre_imagen[${paradaIndex}][]" placeholder="Nombre de la imagen" class="espacio">
             <label>Agregar Imagen:</label>
-            <input type="file" name="archivo_imagen[${paradaIndex}][]" accept="image/*">
+            <input type="file" name="archivo_imagen[${paradaIndex}][]" accept="image/*" class="espacio">
         </div>
     `);
 }
@@ -19,26 +19,28 @@ function agregarParada() {
     const newParada = document.createElement('div');
     newParada.classList.add('parada');
     newParada.innerHTML = `
-        <hr>
+    <h6>Nueva parada </h6>
+         <hr class="linea-divisoria">
         <label>Nombre de la Parada:</label>
         <input type="text" name="nombre_parada[]">
-        <div id="contenedor-imagenes-${paradaIndex}">
+        <div id="contenedor-imagenes-${paradaIndex}" >
             <div class="imagen">
                 <label>Nombre de la Imagen:</label>
-                <input type="text" name="nombre_imagen[${paradaIndex}][]" placeholder="Nombre de la imagen">
+                <input type="text" name="nombre_imagen[${paradaIndex}][]" placeholder="Nombre de la imagen" class="espacio">
                 <label>Agregar Imagen:</label>
-                <input type="file" name="archivo_imagen[${paradaIndex}][]" accept="image/*">
-            </div>
-            <button type="button" onclick="agregarImagen(${paradaIndex})">Agregar Imagen</button>
+                <input type="file" name="archivo_imagen[${paradaIndex}][]" accept="image/*" class="espacio">
+            </div> 
+            
         </div>
+        
         <fieldset class="seccion-audio">
-            <label>Nombre del Audio:</label>
+            <label>Nombre del Audio:</label >
             <input type="text" name="audio_nombre[]">
             <label>Agregar Audio:</label>
-            <input type="file" name="audio_archivo[]" accept="audio/*">
+            <input type="file" name="audio_archivo[]" accept="audio/*" class="espacio">
         </fieldset>
         <label>Coordenadas:</label>
-        <input type="text" name="coordenadas[]">
+        <input type="text" name="coordenadas[]" class="espacio">
     `;
     paradaForm.appendChild(newParada);
 }
